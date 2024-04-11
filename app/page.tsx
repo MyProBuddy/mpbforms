@@ -9,6 +9,7 @@ import Cta from '@/components/sections/cta'
 import Featuredin from '@/components/sections/featuredin'
 import Partners from '@/components/sections/partners'
 import Footer from '@/components/sections/footer'
+import Pricing from '@/components/sections/pricing'
 
 export default function Home() {
     return (
@@ -21,8 +22,11 @@ export default function Home() {
             <Grants />
             <Cta/>
             <Featuredin />
+            <Pricing />
             <Partners />
+
             <Footer />
+            
         </main>
     )
 }
