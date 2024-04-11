@@ -21,8 +21,8 @@ export function Checkbox({ label, name }: CheckboxProps) {
 export default function Hero() {
     return (
         <section className='flex justify-center p-6'>
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 px-16 w-11/12 items-center'>
-                <div className='col-span-7 flex flex-col gap-7 pt-6'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 lg:w-11/12 items-center'>
+                <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-fit font-semibold lg:p-4'>
                         <span>Know the best</span>
                         <span className='text-[40px] text-[#FF8F40] uppercase'>
@@ -40,7 +40,7 @@ export default function Hero() {
                         />
                     </div>
                 </div>
-                <div className='col-span-5 mt-8 lg:mt-0'>
+                <div className='lg:col-span-5 mt-8 lg:mt-0'>
                     <form className='border-4 border-gray-500 flex py-6 flex-col gap-8 rounded-2xl'>
                         <h2 className='text-[#5F248E] text-center text-2xl font-semibold'>
                             Share your details below to <br />
