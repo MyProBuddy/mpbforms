@@ -56,8 +56,8 @@ export default function Pricing() {
     return (
         <section className='pt-12 bg-[#5F248E] p-6'>
             <div className='flex flex-col justify-center items-center font-semibold gap-3'>
-                <h1 className='uppercase text-[36px] text-white'>our pricing</h1>
-                <p className='text-[24px] font-normal text-white mb-4 text-center'>
+                <h1 className='uppercase text-[28px] sm:text-[36px] text-white'>our pricing</h1>
+                <p className='text-[18px] sm:text-[24px] font-normal text-white mb-4 text-center'>
                     We offer you comprehensive service at an affordable price
                 </p>
             </div>

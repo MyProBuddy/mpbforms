@@ -20,15 +20,15 @@ export function Checkbox({ label, name }: CheckboxProps) {
 
 export default function Hero() {
     return (
-        <section className='flex justify-center p-6'>
+        <section className='flex justify-center px-6 pt-6'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 lg:w-11/12 items-center'>
                 <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-fit font-semibold lg:p-4'>
-                        <span>Know the best</span>
-                        <span className='text-[40px] text-[#FF8F40] uppercase'>
+                        <span className='text-xl sm:text-2xl'>Know the best</span>
+                        <span className='text-xl sm:text-[40px] text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
                         </span>
-                        <span>
+                        <span className='text-right text-xl sm:text-2xl'>
                             for your business idea / startup
                         </span>
                     </div>
