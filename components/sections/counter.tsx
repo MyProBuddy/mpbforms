@@ -1,32 +1,36 @@
-"use client";
+'use client'
 
-import React from 'react';
-import CountUp from 'react-countup';
+import React from 'react'
+import CountUp from 'react-countup'
 
+interface CounterItemProps {
+    count: number
+    append: string
+    content: string
+}
+
+export function CounterItem({ count, append, content }: CounterItemProps) {
+    return (
+        <div className='w-52 py-4 flex flex-col gap-1 justify-center items-center'>
+            <h2 className='text-5xl font-bold text-center'>
+                <CountUp end={count} /> {append}
+            </h2>
+            <p className='py-2 font-bold text-center text-[#d5b3ef]'>
+                {content}
+            </p>
+        </div>
+    )
+}
 
 const Counter = () => {
     return (
-        <div className="flex bg-[#5F248E] py-6 justify-center">
-            <div className="flex justify-between flex-wrap w-4/5">
-            <div className="w-[150px] py-4">
-                <h1 className="text-4xl font-bold text-center"><CountUp end={103} /></h1>
-                <p className="py-2 font-bold text-center">Schemes Available </p>
-            </div>
-            <div className="w-[150px] py-4">
-                <h2 className="text-4xl font-bold text-center"><CountUp end={82} /> L</h2>
-                <p className="py-2 font-bold text-center">Avg Deal Size</p>
-            </div>
-            <div className="w-[150px] py-4">
-                <h2 className="text-4xl font-bold text-center"><CountUp end={7000} />+</h2>
-                <p className="py-2 font-bold text-center">Happy Customers</p>
-            </div>
-            <div className="w-[150px] py-4">
-                <h2 className="text-4xl font-bold text-center"><CountUp end={91.8} decimals={1}/>%* </h2>
-                <p className="py-2 font-bold text-center">Success rate</p>
-            </div>
+        <div className='bg-[#5F248E] py-6 justify-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <CounterItem count={103} append='' content='Schemes Available' />
+            <CounterItem count={82} append='L' content='Avg Deal Size' />
+            <CounterItem count={7000} append='+' content='Happy Customers' />
+            <CounterItem count={91.8} append='%' content='Success rate' />
         </div>
-        </div>
-    );
-};
+    )
+}
 
-export default Counter;
+export default Counter
