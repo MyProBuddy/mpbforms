@@ -9,8 +9,8 @@ interface CheckboxProps {
 
 export function Checkbox({ label, name }: CheckboxProps) {
     return (
-        <div className='flex p-1 gap-2'>
-            <input type='checkbox' name={name} value={name}></input>
+        <div className='flex p-1 items-center gap-2'>
+            <input className='w-4 h-4' type='checkbox' name={name} value={name}></input>
             <label className='text-center font-inter text-lg font-normal'>
                 {label}
             </label>
@@ -20,19 +20,19 @@ export function Checkbox({ label, name }: CheckboxProps) {
 
 export default function Hero() {
     return (
-        <section className='flex justify-center'>
-            <div className='grid grid-cols-12 gap-4 px-16 w-11/12 items-center'>
+        <section className='flex justify-center p-6'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 px-16 w-11/12 items-center'>
                 <div className='col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-fit font-semibold lg:p-4'>
-                        <div>Know the best</div>
-                        <div className='text-[40px] text-[#FF8F40] uppercase'>
+                        <span>Know the best</span>
+                        <span className='text-[40px] text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
-                        </div>
-                        <div className='text-end'>
+                        </span>
+                        <span>
                             for your business idea / startup
-                        </div>
+                        </span>
                     </div>
-                    <div>
+                    <div className='hidden lg:block'>
                         <Image
                             alt='hero-img'
                             src={heroImg}
@@ -40,25 +40,28 @@ export default function Hero() {
                         />
                     </div>
                 </div>
-                <div className='col-span-5'>
+                <div className='col-span-5 mt-8 lg:mt-0'>
                     <form className='border-4 border-gray-500 flex py-6 flex-col gap-8 rounded-2xl'>
                         <h2 className='text-[#5F248E] text-center text-2xl font-semibold'>
                             Share your details below to <br />
                             get a call from our Experts
                         </h2>
                         <div className='px-10 flex flex-col gap-6'>
-                            <div className='flex gap-4'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                                 <input
-                                    className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md flex-1'
+                                    className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
+                                    type='text'
                                     placeholder='Name*'
                                 ></input>
                                 <input
-                                    className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md flex-1'
+                                    className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
+                                    type='tel'
                                     placeholder='Phone*'
                                 ></input>
                             </div>
                             <input
                                 className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
+                                type='email'
                                 placeholder='Email*'
                             ></input>
                             <textarea
@@ -101,7 +104,7 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        <button className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-3 rounded-full bg-[#EC3D28] w-fit'>
+                        <button className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'>
                             <p className='text-white text-center font-inter text-xl font-semibold uppercase'>
                                 Book Now
                             </p>

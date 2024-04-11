@@ -54,15 +54,15 @@ export function PricingCard({
 
 export default function Pricing() {
     return (
-        <section className='pt-12 bg-[#5F248E]'>
+        <section className='pt-12 bg-[#5F248E] p-6'>
             <div className='flex flex-col justify-center items-center font-semibold gap-3'>
-                <h1 className='uppercase text-[36px]'>our pricing</h1>
-                <p className='text-[24px] font-normal'>
+                <h1 className='uppercase text-[36px] text-white'>our pricing</h1>
+                <p className='text-[24px] font-normal text-white mb-4 text-center'>
                     We offer you comprehensive service at an affordable price
                 </p>
             </div>
-            <div className='flex justify-center items-center gap-14'>
-                <div className=''>
+            <div className='flex flex-wrap justify-center items-center gap-6 md:gap-14'>
+                <div className='hidden lg:block'>
                     <Image alt='pricing-img' src={pricingImg} width={750} />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function Pricing() {
                         recommended={true}
                         title='Professional'
                         price='₹ 2,199'
-                        description='Everything in Standard <br/><br/> + <br/><br/> Grant Proposal Template'
+                        description='Everything in Standard <br/><br/> + <br/><br/> <p className="font-semibold">Grant Proposal Template</p>'
                         color='#F47217'
                     />
                 </div>

@@ -12,8 +12,8 @@ interface CounterItemProps {
 export function CounterItem({ count, append, content }: CounterItemProps) {
     return (
         <div className='w-52 py-4 flex flex-col gap-1 justify-center items-center'>
-            <h2 className='text-5xl font-bold text-center'>
-                <CountUp end={count} /> {append}
+            <h2 className='text-5xl font-bold text-center text-white'>
+                <CountUp start={0} end={count} />{append}
             </h2>
             <p className='py-2 font-bold text-center text-[#d5b3ef]'>
                 {content}
@@ -28,7 +28,7 @@ const Counter = () => {
             <CounterItem count={103} append='' content='Schemes Available' />
             <CounterItem count={82} append='L' content='Avg Deal Size' />
             <CounterItem count={7000} append='+' content='Happy Customers' />
-            <CounterItem count={91.8} append='%' content='Success rate' />
+            <CounterItem count={91.8} append='%*' content='Success rate' />
         </div>
     )
 }
