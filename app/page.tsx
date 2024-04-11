@@ -5,6 +5,7 @@ import Counter from '@/components/sections/counter'
 import Grants from '@/components/sections/grants'
 import Schemes from '@/components/sections/schemes'
 import Features from '@/components/sections/features'
+import Pricing from '@/components/sections/pricing'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <Features />
             <Schemes />
             <Grants />
+            <Pricing />
         </main>
     )
 }
