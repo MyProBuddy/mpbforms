@@ -22,7 +22,7 @@ export default function Hero() {
     return (
         <section className='flex justify-center'>
             <div className='grid grid-cols-12 gap-4 px-16 w-11/12 items-center'>
-                <div className='col-span-7 flex flex-col gap-7 py-6'>
+                <div className='col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-fit font-semibold lg:p-4'>
                         <div>Know the best</div>
                         <div className='text-[40px] text-[#FF8F40] uppercase'>

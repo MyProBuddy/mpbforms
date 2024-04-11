@@ -4,6 +4,7 @@ import Image from "next/image";
 import Counter from "@/components/sections/counter";
 import Grants from "@/components/sections/grants";
 import Schemes from "@/components/sections/schemes";
+import Cta from "@/components/sections/cta";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Counter />
       <Schemes />
       <Grants />
+      <Cta />
     </main>
   );
 }
