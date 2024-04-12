@@ -61,29 +61,69 @@ export default function Pricing() {
                     We offer you comprehensive service at an affordable price
                 </p>
             </div>
-            <div className='flex flex-wrap justify-center items-center gap-6 md:gap-14'>
-                <div className='hidden lg:block'>
-                    <Image alt='pricing-img' src={pricingImg} width={750} />
-                </div>
-                <div>
-                    <PricingCard
-                        recommended={true}
-                        title='Professional'
-                        price='₹ 2,199'
-                        description='Everything in Standard <br/><br/> + <br/><br/> <p className="font-semibold">Grant Proposal Template</p>'
-                        color='#F47217'
-                    />
-                </div>
-                <div>
-                    <PricingCard
-                        recommended={false}
-                        title='Standard'
-                        price='₹ 1,999'
-                        description='Top 5 Eligibility report<br/><br/> Competitor Analysis<br/><br/> Grant Roadmap<br/><br/> Application best practices'
-                        color='#5F248E'
-                    />
-                </div>
-            </div>
+            <div className="wrapper">
+    <div className="table premium">
+      <div className="ribbon"><span>Recommend</span></div>
+      <div className="price-section">
+        <div className="price-area">
+          <div className="inner-area">
+            <span className="text">$</span>
+            <span className="price">59</span>
+          </div>
+        </div>
+      </div>
+      <div className="package-name"></div>
+      <ul className="features">
+        <li>
+          <span className="list-name">Five Existing Templates</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">100% Responsive Design</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">Credit Remove Permission</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">Lifetime Template Updates</span>
+          <span className="icon cross"><i className="fas fa-times"></i></span>
+        </li>
+      </ul>
+      <div className="btn"><button>Purchase</button></div>
+    </div>
+    <div className="table ultimate">
+      <div className="price-section">
+        <div className="price-area">
+          <div className="inner-area">
+            <span className="text">$</span>
+            <span className="price">99</span>
+          </div>
+        </div>
+      </div>
+      <div className="package-name"></div>
+      <ul className="features">
+        <li>
+          <span className="list-name">All Existing Templates</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">100% Responsive Design</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">Credit Remove Permission</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+        <li>
+          <span className="list-name">Lifetime Template Updates</span>
+          <span className="icon check"><i className="fas fa-check"></i></span>
+        </li>
+      </ul>
+      <div className="btn"><button>Purchase</button></div>
+    </div>
+  </div>
         </section>
     )
 }
