@@ -16,7 +16,7 @@ export function CounterItem({ count, append, content }: CounterItemProps) {
                 <CountUp start={0} end={count} />
                 {append}
             </h2>
-            <p className='py-2 font-bold text-center text-[#d5b3ef] text-xs'>
+            <p className='pt-2 font-bold text-center text-[#d5b3ef] sm:text-xl text-xs'>
                 {content}
             </p>
         </div>

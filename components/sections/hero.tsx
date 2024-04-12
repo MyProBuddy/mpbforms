@@ -6,12 +6,13 @@ import { ChevronRight } from 'lucide-react'
 import axios from 'axios'
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Airtable from 'airtable';
+import dotenv from 'dotenv';
+
 
 interface CheckboxProps {
-    label: string
+    label: string;
     name: string
 }
-
 
 
 export function Checkbox({ label, name }: CheckboxProps) {
@@ -32,25 +33,27 @@ export function Checkbox({ label, name }: CheckboxProps) {
 
 export default function Hero() {
 
-    var Airtable = require('airtable');
-    var base = new Airtable({apiKey: ''}).base('');
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [description, setDescription] = useState('');
 
-    const handleSubmit = (event: FormEvent) => {
-        event.preventDefault();
 
-        base('Table 1').create({
-            "Name": "John",
-            "Phone": "1234567890",
-            "Email": "",
-            "Description": "Hello",
-        }, function(err: any, record: any) {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            console.log(record.getId());
-        });
-    }
+dotenv.config();
+
+const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const data = new FormData();
+    data.append('name', name);
+    data.append('phone', phone);
+    data.append('email', email);
+    data.append('description', description);
+
+    axios.post('/api/db/root', data)
+      .then(response => console.log(response))
+      .catch(error => console.error(error));
+  };
 
 
 
@@ -89,21 +92,25 @@ export default function Hero() {
                                     className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
                                     type='text'
                                     placeholder='Name*'
+                                    onChange={(e: ChangeEvent<HTMLInputElement>) => {setName(e.target.value)}}
                                 ></input>
                                 <input
                                     className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
                                     type='tel'
                                     placeholder='Phone*'
+                                    onChange={(e: ChangeEvent<HTMLInputElement>) => {setPhone(e.target.value)}}
                                 ></input>
                             </div>
                             <input
                                 className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
                                 type='email'
                                 placeholder='Email*'
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => {setEmail(e.target.value)}}
                             ></input>
                             <textarea
                                 className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
                                 placeholder='Short description about your business idea/startup*'
+                                onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {setDescription(e.target.value)}}
                             ></textarea>
 
                             <div>
@@ -124,7 +131,8 @@ export default function Hero() {
                                         label='LinkedIn'
                                         name='linkedin'
                                     />
-                                    <Checkbox label='Organic' name='organic' />
+                                    <Checkbox label='Organic' name='organic' 
+                                    />
                                     <Checkbox
                                         label='MPB Club'
                                         name='mpb-club'
