@@ -1,11 +1,18 @@
+"use client";
+
 import Image from 'next/image'
 import heroImg from '@/static/hero-img.png'
 import { ChevronRight } from 'lucide-react'
+import axios from 'axios'
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import Airtable from 'airtable';
 
 interface CheckboxProps {
     label: string
     name: string
 }
+
+
 
 export function Checkbox({ label, name }: CheckboxProps) {
     return (
@@ -19,6 +26,29 @@ export function Checkbox({ label, name }: CheckboxProps) {
 }
 
 export default function Hero() {
+
+    var Airtable = require('airtable');
+    var base = new Airtable({apiKey: 'patIbmjXFbjQrPMz5.2cbcad594edd4f53a2bc9efbd5ecb867e0b76e98fe59139cd8d66f7e95caf995'}).base('appWNcw6NNJ2cgsSI');
+
+    const handleSubmit = (event: FormEvent) => {
+        event.preventDefault();
+
+        base('Table 1').create({
+            "Name": "John",
+            "Phone": "1234567890",
+            "Email": "",
+            "Description": "Hello",
+        }, function(err: any, record: any) {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            console.log(record.getId());
+        });
+    }
+
+
+
     return (
         <section className='flex justify-center px-6 pt-6'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 lg:w-11/12 items-center'>
@@ -105,7 +135,7 @@ export default function Hero() {
                         </div>
 
                         <button className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'>
-                            <p className='text-white text-center font-inter text-xl font-semibold uppercase'>
+                            <p className='text-white text-center font-inter text-xl font-semibold uppercase' onClick={handleSubmit}>
                                 Book Now
                             </p>
                             <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center'>

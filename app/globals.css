@@ -25,6 +25,7 @@
   width: calc(33% - 20px);
   padding: 30px 30px;
   position: relative;
+  border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 .table .price-section{
@@ -55,9 +56,9 @@
   left: 17px;
 }
 .price-area .inner-area .price{
-  font-size: 45px;
+  font-size: 25px;
   font-weight: 500;
-  margin-left: 16px;
+  margin-left: 0px;
 }
 .table .package-name{
   width: 100%;
@@ -79,7 +80,7 @@
   margin-bottom: 15px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .features li .list-name{
   font-size: 17px;
@@ -168,11 +169,11 @@
   content: "Basic";
 }
 .premium .package-name::before{
-  content: "Premium";
+  content: "PROFESSIONAL";
   font-size: 24px;
 }
 .ultimate .package-name::before{
-  content: "Ultimate";
+  content: "STANDARD";
   font-size: 24px;
 }
 @media (max-width: 1020px) {
