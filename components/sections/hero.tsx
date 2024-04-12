@@ -33,7 +33,7 @@ export function Checkbox({ label, name }: CheckboxProps) {
 export default function Hero() {
 
     var Airtable = require('airtable');
-    var base = new Airtable({apiKey: 'patIbmjXFbjQrPMz5.2cbcad594edd4f53a2bc9efbd5ecb867e0b76e98fe59139cd8d66f7e95caf995'}).base('appWNcw6NNJ2cgsSI');
+    var base = new Airtable({apiKey: ''}).base('');
 
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
@@ -56,16 +56,16 @@ export default function Hero() {
 
     return (
         <section className='flex justify-center px-6 pt-6 md:pb-0 pb-6'>
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 lg:w-11/12 items-center'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 xl:w-11/12 items-center'>
                 <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
-                        <span className='text-xl sm:text-2xl'>
+                        <span className='text-xl text-center sm:text-left sm:text-2xl'>
                             Know the best
                         </span>
-                        <span className='text-xl sm:text-3xl text-[#FF8F40] uppercase'>
+                        <span className='text-xl text-center sm:text-3xl text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
                         </span>
-                        <span className='text-right text-xl sm:text-2xl'>
+                        <span className=' text-center sm:text-right text-xl sm:text-2xl'>
                             for your business idea / startup
                         </span>
                     </div>
@@ -79,11 +79,11 @@ export default function Hero() {
                 </div>
                 <div className='lg:col-span-5 mt-8 lg:mt-0'>
                     <form className='border-4 border-gray-500 flex py-6 flex-col gap-8 rounded-2xl'>
-                        <h2 className='text-[#5F248E] text-center text-2xl font-semibold'>
-                            Share your details below to <br />
-                            get a call from our Experts
+                        <h2 className='text-[#5F248E] text-center text:xl sm:text-2xl font-semibold'>
+                            Share your details below to 
+                            get <br/>a call from our Experts
                         </h2>
-                        <div className='px-10 flex flex-col gap-6'>
+                        <div className='px-4 flex flex-col gap-6'>
                             <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                                 <input
                                     className='px-3 py-2 border-2 border-[#9C9C9C] rounded-md'
