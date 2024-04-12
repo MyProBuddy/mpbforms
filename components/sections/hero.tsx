@@ -17,7 +17,12 @@ interface CheckboxProps {
 export function Checkbox({ label, name }: CheckboxProps) {
     return (
         <div className='flex p-1 items-center gap-2'>
-            <input className='w-4 h-4' type='checkbox' name={name} value={name}></input>
+            <input
+                className='w-4 h-4'
+                type='checkbox'
+                name={name}
+                value={name}
+            ></input>
             <label className='text-center font-inter text-lg font-normal'>
                 {label}
             </label>
@@ -50,12 +55,14 @@ export default function Hero() {
 
 
     return (
-        <section className='flex justify-center px-6 pt-6'>
+        <section className='flex justify-center px-6 pt-6 md:pb-0 pb-6'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 lg:w-11/12 items-center'>
                 <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
-                    <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-fit font-semibold lg:p-4'>
-                        <span className='text-xl sm:text-2xl'>Know the best</span>
-                        <span className='text-xl sm:text-[40px] text-[#FF8F40] uppercase'>
+                    <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
+                        <span className='text-xl sm:text-2xl'>
+                            Know the best
+                        </span>
+                        <span className='text-xl sm:text-3xl text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
                         </span>
                         <span className='text-right text-xl sm:text-2xl'>
