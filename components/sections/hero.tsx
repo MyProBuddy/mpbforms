@@ -36,13 +36,15 @@ export default function Hero() {
     const [email, setEmail] = useState('')
     const [description, setDescription] = useState('')
 
-    const [instagramCheckBox, setInstagramCheckBox] = useState(false)
-    const [facebookCheckBox, setFacebookCheckBox] = useState(false)
-    const [linkedinCheckBox, setLinkedinCheckBox] = useState(false)
-    const [organicCheckBox, setOrganicCheckBox] = useState(false)
-    const [mpbClubCheckBox, setMpbClubCheckBox] = useState(false)
-    const [quoraMediumCheckBox, setQuoraMediumCheckBox] = useState(false)
-    const [referralCheckBox, setReferralCheckBox] = useState(false)
+    const [referralOrigins, setReferralOrigins] = useState<string[]>([])
+
+    const handleCheckboxChange = (value: string, checked: boolean) => {
+        if (checked) {
+            setReferralOrigins([value])
+        } else {
+            setReferralOrigins([])
+        }
+    }
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault()
@@ -52,32 +54,7 @@ export default function Hero() {
         data.append('phone', phone)
         data.append('email', email)
         data.append('description', description)
-
-        const referralOrigin = []
-
-        if (instagramCheckBox) {
-            referralOrigin.push('Instagram')
-        }
-        if (facebookCheckBox) {
-            referralOrigin.push('Facebook')
-        }
-        if (linkedinCheckBox) {
-            referralOrigin.push('LinkedIn')
-        }
-        if (organicCheckBox) {
-            referralOrigin.push('Organic')
-        }
-        if (mpbClubCheckBox) {
-            referralOrigin.push('MPB Club')
-        }
-        if (quoraMediumCheckBox) {
-            referralOrigin.push('Quora/Medium')
-        }
-        if (referralCheckBox) {
-            referralOrigin.push('Referral')
-        }
-
-        data.append('referralOrigin', referralOrigin.join(','))
+        data.append('referralOrigin', referralOrigins.join(','))
 
         fetch('/api/db/', {
             method: 'POST',
@@ -93,7 +70,7 @@ export default function Hero() {
 
     return (
         <section className='flex justify-center px-6 pt-6 md:pb-0 pb-6'>
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 xl:w-11/12 items-center'>
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 w-full xl:w-11/12 items-center'>
                 <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
                         <span className='text-xl text-center sm:text-left sm:text-2xl'>
@@ -171,13 +148,15 @@ export default function Hero() {
                                     From where did you hear about us?{' '}
                                 </p>
                                 <div className='flex flex-wrap gap-2 items-start content-start self-stretch text-[#4D4D4D]'>
-                                    {/* Instagram, Facebook, LinkedIn, Organic, MPB Club, Quora/medium, Referral */}
                                     <Checkbox
                                         label='Instagram'
                                         name='instagram'
-                                        checked={instagramCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'Instagram',
+                                        )}
                                         onChange={(e) =>
-                                            setInstagramCheckBox(
+                                            handleCheckboxChange(
+                                                'Instagram',
                                                 e.target.checked,
                                             )
                                         }
@@ -185,9 +164,12 @@ export default function Hero() {
                                     <Checkbox
                                         label='Facebook'
                                         name='facebook'
-                                        checked={facebookCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'Facebook',
+                                        )}
                                         onChange={(e) =>
-                                            setFacebookCheckBox(
+                                            handleCheckboxChange(
+                                                'Facebook',
                                                 e.target.checked,
                                             )
                                         }
@@ -195,9 +177,12 @@ export default function Hero() {
                                     <Checkbox
                                         label='LinkedIn'
                                         name='linkedin'
-                                        checked={linkedinCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'LinkedIn',
+                                        )}
                                         onChange={(e) =>
-                                            setLinkedinCheckBox(
+                                            handleCheckboxChange(
+                                                'LinkedIn',
                                                 e.target.checked,
                                             )
                                         }
@@ -205,25 +190,38 @@ export default function Hero() {
                                     <Checkbox
                                         label='Organic'
                                         name='organic'
-                                        checked={organicCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'Organic',
+                                        )}
                                         onChange={(e) =>
-                                            setOrganicCheckBox(e.target.checked)
+                                            handleCheckboxChange(
+                                                'Organic',
+                                                e.target.checked,
+                                            )
                                         }
                                     />
                                     <Checkbox
                                         label='MPB Club'
                                         name='mpb-club'
-                                        checked={mpbClubCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'MPB Club',
+                                        )}
                                         onChange={(e) =>
-                                            setMpbClubCheckBox(e.target.checked)
+                                            handleCheckboxChange(
+                                                'MPB Club',
+                                                e.target.checked,
+                                            )
                                         }
                                     />
                                     <Checkbox
                                         label='Quora/Medium'
                                         name='quora-medium'
-                                        checked={quoraMediumCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'Quora/Medium',
+                                        )}
                                         onChange={(e) =>
-                                            setQuoraMediumCheckBox(
+                                            handleCheckboxChange(
+                                                'Quora/Medium',
                                                 e.target.checked,
                                             )
                                         }
@@ -231,9 +229,12 @@ export default function Hero() {
                                     <Checkbox
                                         label='Referral'
                                         name='referral'
-                                        checked={referralCheckBox}
+                                        checked={referralOrigins.includes(
+                                            'Referral',
+                                        )}
                                         onChange={(e) =>
-                                            setReferralCheckBox(
+                                            handleCheckboxChange(
+                                                'Referral',
                                                 e.target.checked,
                                             )
                                         }
