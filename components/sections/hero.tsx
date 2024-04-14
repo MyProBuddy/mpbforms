@@ -107,7 +107,7 @@ export default function Hero() {
                         <span className='text-xl text-center md:text-left sm:text-2xl'>
                             Know the best
                         </span>
-                        <span className='text-xl text-center lg:text-[30px] md:text-2xl sm:text-2xl text-[#FF8F40] uppercase'>
+                        <span className='text-xl text-center lg:text-[28px] md:text-2xl sm:text-2xl text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
                         </span>
                         <span className=' text-center md:text-right text-xl sm:text-2xl'>
