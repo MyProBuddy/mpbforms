@@ -4,6 +4,17 @@ import Image from 'next/image'
 import heroImg from '@/static/hero-img.png'
 import { ChevronRight } from 'lucide-react'
 import React, { useState, ChangeEvent } from 'react'
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogTrigger,
+} from '@/components/ui/alert-dialog'
 
 interface CheckboxProps {
     label: string
@@ -35,6 +46,7 @@ export default function Hero() {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [description, setDescription] = useState('')
+    const [showAlert, setShowAlert] = useState(false)
 
     const [referralOrigins, setReferralOrigins] = useState<string[]>([])
 
@@ -62,6 +74,7 @@ export default function Hero() {
         })
             .then((response) => {
                 console.log(response)
+                setShowAlert(true)
             })
             .catch((error) => {
                 console.error(error)
@@ -69,17 +82,17 @@ export default function Hero() {
     }
 
     return (
-        <section className='flex justify-center px-6 pt-6 md:pb-0 pb-6'>
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 lg:px-16 w-full xl:w-11/12 items-center'>
-                <div className='lg:col-span-7 flex flex-col gap-7 pt-6'>
+        <section className='flex justify-center pt-6 md:pb-0 pb-6'>
+            <div className='w-21/24 gap-10 mx-16 lg:flex justify-center items-center'>
+                <div className='lg:col-span-7 sm:w-1/2 w-full flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
-                        <span className='text-xl text-center sm:text-left sm:text-2xl'>
+                        <span className='text-xl text-center md:text-left sm:text-2xl'>
                             Know the best
                         </span>
-                        <span className='text-xl text-center sm:text-3xl text-[#FF8F40] uppercase'>
+                        <span className='text-xl text-center lg:text-[30px] md:text-2xl sm:text-2xl text-[#FF8F40] uppercase'>
                             Grants & Government Schemes
                         </span>
-                        <span className=' text-center sm:text-right text-xl sm:text-2xl'>
+                        <span className=' text-center md:text-right text-xl sm:text-2xl'>
                             for your business idea / startup
                         </span>
                     </div>
@@ -91,7 +104,7 @@ export default function Hero() {
                         />
                     </div>
                 </div>
-                <div className='lg:col-span-5 mt-8 lg:mt-0'>
+                <div className='lg:col-span-5 sm:w-1/2 w-full mt-8 mb-4 lg:mt-0'>
                     <form
                         onSubmit={handleSubmit}
                         className='border-4 border-gray-500 flex py-6 flex-col gap-8 rounded-2xl'
@@ -242,18 +255,74 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
-
-                        <button
-                            type='submit'
-                            className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'
+                        {/* ... */}
+                        <AlertDialog
+                            open={showAlert}
+                            onOpenChange={setShowAlert}
                         >
-                            <p className='text-white text-center font-inter text-xl font-semibold uppercase'>
-                                Book Now
-                            </p>
-                            <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center'>
-                                <ChevronRight size={24} color='#EC3D28' />
-                            </div>
-                        </button>
+                            <AlertDialogTrigger>
+                                <button
+                                    type='submit'
+                                    className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'
+                                >
+                                    <p className='text-white text-center font-inter text-sm sm:text-xl font-semibold uppercase'>
+                                        Book Now
+                                    </p>
+                                    <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center'>
+                                        <ChevronRight
+                                            size={24}
+                                            color='#EC3D28'
+                                        />
+                                    </div>
+                                </button>
+                            </AlertDialogTrigger>
+                            <AlertDialogContent>
+                                <AlertDialogHeader>
+                                    <AlertDialogTitle className='flex text-xl text-black justify-center items-center text-center'>
+                                        <svg
+                                            xmlns='http://www.w3.org/2000/svg'
+                                            width='80'
+                                            height='80'
+                                            viewBox='0 0 24 24'
+                                            fill='none'
+                                            stroke='#25da43'
+                                            stroke-width='2'
+                                            stroke-linecap='round'
+                                            stroke-linejoin='round'
+                                            className='lucide text-center lucide-circle-check-big'
+                                        >
+                                            <path d='M22 11.08V12a10 10 0 1 1-5.93-9.14' />
+                                            <path d='m9 11 3 3L22 4' />
+                                        </svg>
+                                    </AlertDialogTitle>
+                                    <AlertDialogTitle className='text-black justify-center items-center text-center text-2xl'>
+                                        Success
+                                    </AlertDialogTitle>
+                                    <AlertDialogDescription className='text-base'>
+                                        <br /> Thank you for submitting your
+                                        details. Our Expert will call you
+                                        shortly.
+                                        <br />
+                                        <br />
+                                        Until then, please check your email ID
+                                        for the consultancy agreement and
+                                        questionnaire.
+                                        <br />
+                                        <br />
+                                        <span className='font-bold'>
+                                            Note:
+                                        </span>{' '}
+                                        You will have to pay only if your idea
+                                        gets shortlisted by our expert team
+                                    </AlertDialogDescription>
+                                </AlertDialogHeader>
+                                <AlertDialogFooter>
+                                    <AlertDialogCancel className='bg-[#F47217] text-white'>
+                                        Okay
+                                    </AlertDialogCancel>
+                                </AlertDialogFooter>
+                            </AlertDialogContent>
+                        </AlertDialog>
                     </form>
                 </div>
             </div>

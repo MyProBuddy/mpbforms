@@ -25,6 +25,15 @@ const Schemes = () => {
                 <Image src="/schemes/seedfundscheme.png" className="rounded" alt="eventgenie" width={180} height={80}></Image>
             </div>
             <div className="text-center p-6">
+                <Image src="/schemes/cdc70.png" className="rounded" alt="greenpodlabs" width={180} height={80}></Image>
+            </div>
+            <div className="text-center p-6">
+                <Image src="/schemes/startuptn.png" className="rounded" alt="greenpodlabs" width={180} height={80}></Image>
+            </div>
+            <div className="text-center p-6">
+                <Image src="/schemes/nvcl.png" className="rounded" alt="greenpodlabs" width={180} height={80}></Image>
+            </div>
+            <div className="text-center p-6">
                 <Image src="/schemes/tbd.png" className="rounded" alt="greenpodlabs" width={180} height={80}></Image>
             </div>
             <div className="text-center p-6 ">

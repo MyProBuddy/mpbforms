@@ -1,232 +1,297 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
   }
-}
 
-.wrapper{
-  max-width: 1090px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.wrapper .table{
-  background: #fff;
-  width: calc(33% - 20px);
-  padding: 30px 30px;
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-.table .price-section{
-  display: flex;
-  justify-content: center;
-}
-.table .price-area{
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  padding: 2px;
-}
-.price-area .inner-area{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  line-height: 117px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-.price-area .inner-area .text{
-  font-size: 25px;
-  font-weight: 400;
-  position: absolute;
-  top: -10px;
-  left: 17px;
-}
-.price-area .inner-area .price{
-  font-size: 25px;
-  font-weight: 500;
-  margin-left: 0px;
-}
-.table .package-name{
-  width: 100%;
-  height: 2px;
-  margin: 35px 0;
-  position: relative;
-}
-.table .package-name::before{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 25px;
-  font-weight: 500;
-  background: #fff;
-  padding: 0 15px;
-  transform: translate(-50%, -50%);
-}
-.table .features li{
-  margin-bottom: 15px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-.features li .list-name{
-  font-size: 17px;
-  font-weight: 400;
-}
-.features li .icon{
-  font-size: 15px;
-}
-.features li .icon.check{
-  color: #2db94d;
-}
-.features li .icon.cross{
-  color: #cd3241;
-}
-.table .btn{
-  width: 100%;
-  display: flex;
-  margin-top: 35px;
-  justify-content: center;
-}
-.table .btn button{
-  width: 80%;
-  height: 50px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.table .btn button:hover{
-  border-radius: 5px;
-}
-.basic .features li::selection{
-  background: #ffd861;
-}
-.basic ::selection,
-.basic .price-area,
-.basic .inner-area{
-  background: #ffd861;
-}
-.basic .btn button{
-  border: 2px solid #ffd861;
-  background: #fff;
-  color: #ffd861;
-}
-.basic .btn button:hover{
-  background: #ffd861;
-  color: #fff;
-}
-.premium ::selection,
-.premium .price-area,
-.premium .inner-area,
-.premium .btn button{
-  background: #a26bfa;
-}
-.premium .btn button:hover{
-  background: #833af8;
-}
-.ultimate ::selection,
-.ultimate .price-area,
-.ultimate .inner-area{
-  background: #F47217;
-}
-.ultimate .btn button{
-  border: 2px solid #F47217;
-  color: #F47217;
-  background: #fff;
-}
-.ultimate .btn button:hover{
-  background: #F47217;
-  color: #fff;
-}
-.basic .package-name{
-  background: #ffecb3;
-}
-.premium .package-name{
-  background: #d0b3ff;
-}
-.ultimate .package-name{
-  background: #F47217;
-}
-.basic .package-name::before{
-  content: "Basic";
-}
-.premium .package-name::before{
-  content: "PROFESSIONAL";
-  font-size: 24px;
-}
-.ultimate .package-name::before{
-  content: "STANDARD";
-  font-size: 24px;
-}
-@media (max-width: 1020px) {
-  .wrapper .table{
-    width: calc(50% - 20px);
-    margin-bottom: 40px;
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
   }
-}
-@media (max-width: 698px) {
-  .wrapper .table{
+
+
+  .wrapper{
+    max-width: 1090px;
     width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-}
-::selection{
-  color: #fff;
-}
-.table .ribbon{
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  overflow: hidden;
-}
-.table .ribbon::before,
-.table .ribbon::after{
-  position: absolute;
-  content: "";
-  z-index: -1;
-  display: block;
-  border: 7px solid #4606ac;
-  border-top-color: transparent;
-  border-left-color: transparent;
-}
-.table .ribbon::before{
-  top: 0px;
-  right: 15px;
-}
-.table .ribbon::after{
-  bottom: 15px;
-  left: 0px;
-}
-.table .ribbon span{
-  position: absolute;
-  top: 30px;
-  right: 0;
-  transform: rotate(-45deg);
-  width: 200px;
-  background: #a26bfa;
-  padding: 10px 0;
-  color: #fff;
-  text-align: center;
-  font-size: 17px;
-  text-transform: uppercase;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.12);
-}
+  .wrapper .table{
+    background: #fff;
+    width: calc(33% - 20px);
+    padding: 30px 30px;
+    margin-top: 30px;
+    border-radius: 10PX;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  .table .price-section{
+    display: flex;
+    justify-content: center;
+  }
+  .table .price-area{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 2px;
+  }
+  .price-area .inner-area{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    line-height: 117px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+  .price-area .inner-area .text{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: -10px;
+    left: 17px;
+  }
+  .price-area .inner-area .price{
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .table .package-name{
+    width: 100%;
+    height: 2px;
+    margin: 35px 0;
+    position: relative;
+  }
+  .table .package-name::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    background: #fff;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+  }
+  .table .features li{
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .features li .list-name{
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .features li .icon{
+    font-size: 15px;
+  }
+  .features li .icon.check{
+    color: #F47217;
+  }
+  .features li .icon.cross{
+    color: #cd3241;
+  }
+  .table .btn{
+    width: 100%;
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+  }
+  .table .btn button{
+    width: 80%;
+    height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .table .btn button:hover{
+    border-radius: 5px;
+  }
+  .basic .features li::selection{
+    background: #F47217;
+  }
+  .basic ::selection,
+  .basic .price-area,
+  .basic .inner-area{
+    background: #F47217;
+  }
+  .basic .btn button{
+    border: 2px solid #F47217;
+    background: #fff;
+    color: #F47217;
+  }
+  .basic .btn button:hover{
+    background: #F47217;
+    color: #fff;
+  }
+  .premium ::selection,
+  .premium .price-area,
+  .premium .inner-area,
+  .premium .btn button{
+    background: #a26bfa;
+  }
+  .premium .btn button:hover{
+    background: #833af8;
+  }
+  .ultimate ::selection,
+  .ultimate .price-area,
+  .ultimate .inner-area{
+    background: #F47217;
+  }
+  .ultimate .btn button{
+    border: 2px solid #F47217;
+    color: #F47217;
+    background: #fff;
+  }
+  .ultimate .btn button:hover{
+    background: #F47217;
+    color: #fff;
+  }
+  .basic .package-name{
+    background: #F47217;
+  }
+  .premium .package-name{
+    background: #d0b3ff;
+  }
+  .ultimate .package-name{
+    background: #F47217;
+  }
+  .basic .package-name::before{
+    content: "BASIC";
+  }
+  .premium .package-name::before{
+    content: "PROFESSIONAL";
+    font-size: 24px;
+  }
+  .ultimate .package-name::before{
+    content: "STANDARD";
+    font-size: 24px;
+  }
+  @media (max-width: 1020px) {
+    .wrapper .table{
+      width: calc(50% - 20px);
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 698px) {
+    .wrapper .table{
+      width: 100%;
+    }
+  }
+  ::selection{
+    color: #fff;
+  }
+  .table .ribbon{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+  }
+  .table .ribbon::before,
+  .table .ribbon::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+  .table .ribbon::before{
+    top: 0px;
+    right: 15px;
+  }
+  .table .ribbon::after{
+    bottom: 15px;
+    left: 0px;
+  }
+  .table .ribbon span{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    width: 200px;
+    background: #a26bfa;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+  }

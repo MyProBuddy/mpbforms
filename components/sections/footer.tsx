@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="bg-[#5F248E]">
             <div className="footer-container flex flex-col md:flex-row justify-between items-center px-4 py-2">
                 <div className="left-section">
-                    <p className="text-l font-bold text-white text-center sm:text-left">More Information  <br></br>www.myprobuddy.com</p>
+                    <p className="text-l font-bold text-white text-center sm:text-left">More Information  <br></br>Reachus@myprobuddy.com</p>
                 </div>
                 <div className="middle-section py-4 ">
                     <ul className="social-icons flex space-x-2">

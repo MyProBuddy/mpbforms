@@ -29,7 +29,15 @@ const Counter = () => {
             <CounterItem count={103} append='' content='Schemes Available' />
             <CounterItem count={82} append='L' content='Avg Deal Size' />
             <CounterItem count={7000} append='+' content='Happy Customers' />
-            <CounterItem count={91.8} append='%*' content='Success rate' />
+            <div className='w-52 py-4 flex flex-col gap-1 justify-center items-center'>
+            <h2 className='text-3xl md:text-5xl font-bold text-center text-white'>
+                <CountUp start={0} end={91.8} decimals={1}/>
+                %*
+            </h2>
+            <p className='pt-2 font-bold text-center text-[#d5b3ef] sm:text-xl text-xs'>
+            Success rate
+            </p>
+        </div>
         </div>
     )
 }
