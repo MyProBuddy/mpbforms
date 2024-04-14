@@ -122,7 +122,7 @@ export default function Hero() {
                         />
                     </div>
                 </div>
-                <div className='lg:col-span-5 sm:w-1/2 w-full mt-8 mb-4 lg:mt-0'>
+                <div className='lg:col-span-5 sm:w-1/2 flex justify-center items-center w-full mt-8 mb-4 lg:mt-0'>
                     <form
                         onSubmit={handleSubmit}
                         className='border-4 border-gray-500 flex py-6 flex-col gap-8 rounded-2xl'
@@ -253,32 +253,7 @@ export default function Hero() {
                                             )
                                         }
                                     />
-                                    <Checkbox
-                                        label='Quora/Medium'
-                                        name='quora-medium'
-                                        checked={referralOrigins.includes(
-                                            'Quora/Medium',
-                                        )}
-                                        onChange={(e) =>
-                                            handleCheckboxChange(
-                                                'Quora/Medium',
-                                                e.target.checked,
-                                            )
-                                        }
-                                    />
-                                    <Checkbox
-                                        label='Referral'
-                                        name='referral'
-                                        checked={referralOrigins.includes(
-                                            'Referral',
-                                        )}
-                                        onChange={(e) =>
-                                            handleCheckboxChange(
-                                                'Referral',
-                                                e.target.checked,
-                                            )
-                                        }
-                                    />
+                                   
                                 </div>
                             </div>
                         </div>
