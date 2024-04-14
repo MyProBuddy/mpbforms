@@ -10,18 +10,20 @@ const schema = zfd.formData({
     phone: zfd.text(),
     email: zfd.text(),
     description: zfd.text(),
+    plan: zfd.text(),
     referralOrigin: zfd.text(),
 })
 
 export async function POST(request: Request) {
     try {
-        const { name, phone, email, description, referralOrigin } =
+        const { name, phone, email, description, plan, referralOrigin } =
             schema.parse(await request.formData())
         console.log(
             name,
             phone,
             email,
             description,
+            plan,
             referralOrigin.split(',').map((item) => item.trim()),
         )
 
@@ -32,6 +34,7 @@ export async function POST(request: Request) {
                     Phone: phone,
                     Email: email,
                     Description: description,
+                    Plan: plan,
                     'Referral Origin': referralOrigin
                         .split(',')
                         .map((item) => item.trim()),

@@ -5,6 +5,13 @@ import heroImg from '@/static/hero-img.png'
 import { ChevronRight } from 'lucide-react'
 import React, { useState, ChangeEvent } from 'react'
 import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"  
+import {
     AlertDialog,
     AlertDialogAction,
     AlertDialogCancel,
@@ -22,6 +29,11 @@ interface CheckboxProps {
     checked: boolean
     onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
+
+interface SelectItem {
+    value: string;
+  }
+  
 
 export function Checkbox({ label, name, checked, onChange }: CheckboxProps) {
     return (
@@ -46,6 +58,7 @@ export default function Hero() {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [description, setDescription] = useState('')
+    const [plan, setPlan] = useState<string>('Basic')
     const [showAlert, setShowAlert] = useState(false)
 
     const [referralOrigins, setReferralOrigins] = useState<string[]>([])
@@ -58,14 +71,19 @@ export default function Hero() {
         }
     }
 
+
+    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setPlan(event.target.value);
+      };
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault()
-
+        console.log(plan)
         const data = new FormData()
         data.append('name', name)
         data.append('phone', phone)
         data.append('email', email)
         data.append('description', description)
+        data.append('plan', plan)
         data.append('referralOrigin', referralOrigins.join(','))
 
         fetch('/api/db/', {
@@ -82,8 +100,8 @@ export default function Hero() {
     }
 
     return (
-        <section className='flex justify-center pt-6 md:pb-0 pb-6'>
-            <div className='w-21/24 gap-10 mx-16 lg:flex justify-center items-center'>
+        <section className='h-screen flex justify-center pt-6 md:pb-0 pb-6'>
+            <div className='w-21/24 gap-10 mx-4 lg:flex justify-center items-center'>
                 <div className='lg:col-span-7 sm:w-1/2 w-full flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
                         <span className='text-xl text-center md:text-left sm:text-2xl'>
@@ -155,7 +173,16 @@ export default function Hero() {
                                     setDescription(e.target.value)
                                 }}
                             ></textarea>
-
+                            <Select>
+                              <SelectTrigger className="border-2 border-[#9C9C9C] w-full">
+                                <SelectValue placeholder="Choose your plan" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="Basic" >Basic</SelectItem>
+                                <SelectItem value="Standard" >Standard</SelectItem>
+                                <SelectItem value="Professional" >Professional</SelectItem>
+                              </SelectContent>
+                            </Select>
                             <div>
                                 <p className='text-[#4D4D4D] text-lg mb-3'>
                                     From where did you hear about us?{' '}
