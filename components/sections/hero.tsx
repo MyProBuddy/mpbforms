@@ -100,7 +100,7 @@ export default function Hero() {
     }
 
     return (
-        <section className='h-screen flex justify-center pt-6 md:pb-0 pb-6'>
+        <section className='flex justify-center pt-6 md:pb-0 pb-6'>
             <div className='w-21/24 gap-10 mx-4 lg:flex justify-center items-center'>
                 <div className='lg:col-span-7 sm:w-1/2 w-full flex flex-col gap-7 pt-6'>
                     <div className='flex flex-col gap-4 text-[#5F248E] text-[26px] w-full sm:w-fit font-semibold lg:p-4'>
