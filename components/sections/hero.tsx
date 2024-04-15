@@ -257,13 +257,7 @@ export default function Hero() {
                                 </div>
                             </div>
                         </div>
-                        {/* ... */}
-                        <AlertDialog
-                            open={showAlert}
-                            onOpenChange={setShowAlert}
-                        >
-                            <AlertDialogTrigger>
-                                <button
+                        <button
                                     type='submit'
                                     className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'
                                 >
@@ -277,6 +271,13 @@ export default function Hero() {
                                         />
                                     </div>
                                 </button>
+                        {/* ... */}
+                        <AlertDialog
+                            open={showAlert}
+                            onOpenChange={setShowAlert}
+                        >
+                            <AlertDialogTrigger>
+                                
                             </AlertDialogTrigger>
                             <AlertDialogContent>
                                 <AlertDialogHeader>
