@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import heroImg from '@/static/hero-img.png'
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Loader2 } from 'lucide-react'
 import React, { useState, ChangeEvent } from 'react'
 import {
     Select,
@@ -10,7 +10,7 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"  
+} from '@/components/ui/select'
 import {
     AlertDialog,
     AlertDialogAction,
@@ -31,9 +31,8 @@ interface CheckboxProps {
 }
 
 interface SelectItem {
-    value: string;
-  }
-  
+    value: string
+}
 
 export function Checkbox({ label, name, checked, onChange }: CheckboxProps) {
     return (
@@ -58,8 +57,10 @@ export default function Hero() {
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
     const [description, setDescription] = useState('')
-    const [plan, setPlan] = useState<string>('Basic')
+    const [plan, setPlan] = useState<string>('')
     const [showAlert, setShowAlert] = useState(false)
+    const [errorMessage, setErrorMessage] = useState<string>('')
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const [referralOrigins, setReferralOrigins] = useState<string[]>([])
 
@@ -71,12 +72,14 @@ export default function Hero() {
         }
     }
 
-
-    const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setPlan(event.target.value);
-      };
+    const handleSelectChange = (
+        event: React.ChangeEvent<HTMLSelectElement>,
+    ) => {
+        setPlan(event.target.value)
+    }
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault()
+        setIsSubmitting(true)
         console.log(plan)
         const data = new FormData()
         data.append('name', name)
@@ -86,6 +89,25 @@ export default function Hero() {
         data.append('plan', plan)
         data.append('referralOrigin', referralOrigins.join(','))
 
+        const isFormValid = () => {
+            return (
+                name.trim() !== '' &&
+                phone.trim() !== '' &&
+                email.trim() !== '' &&
+                description.trim() !== '' &&
+                plan.trim() !== '' &&
+                referralOrigins.length > 0
+            )
+        }
+
+        if (!isFormValid()) {
+            setErrorMessage('Please fill all the fields')
+            setIsSubmitting(false)
+            return
+        }
+
+        setErrorMessage('')
+
         fetch('/api/db/', {
             method: 'POST',
             body: data,
@@ -93,9 +115,12 @@ export default function Hero() {
             .then((response) => {
                 console.log(response)
                 setShowAlert(true)
+                setIsSubmitting(false)
             })
             .catch((error) => {
                 console.error(error)
+                setErrorMessage('An error occurred while submitting the form')
+                setIsSubmitting(false)
             })
     }
 
@@ -173,15 +198,19 @@ export default function Hero() {
                                     setDescription(e.target.value)
                                 }}
                             ></textarea>
-                            <Select>
-                              <SelectTrigger className="border-2 border-[#9C9C9C] w-full">
-                                <SelectValue placeholder="Choose your plan" />
-                              </SelectTrigger>
-                              <SelectContent>
-                                <SelectItem value="Basic" >Basic</SelectItem>
-                                <SelectItem value="Standard" >Standard</SelectItem>
-                                <SelectItem value="Professional" >Professional</SelectItem>
-                              </SelectContent>
+                            <Select onValueChange={setPlan}>
+                                <SelectTrigger className='border-2 border-[#9C9C9C] w-full'>
+                                    <SelectValue placeholder='Choose your plan' />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value='Basic'>Basic</SelectItem>
+                                    <SelectItem value='Standard'>
+                                        Standard
+                                    </SelectItem>
+                                    <SelectItem value='Professional'>
+                                        Professional
+                                    </SelectItem>
+                                </SelectContent>
                             </Select>
                             <div>
                                 <p className='text-[#4D4D4D] text-lg mb-3'>
@@ -253,32 +282,44 @@ export default function Hero() {
                                             )
                                         }
                                     />
-                                   
                                 </div>
                             </div>
+                            <p className='text-red-500'>
+                                {' '}
+                                {errorMessage && `!! ${errorMessage}`}
+                            </p>
                         </div>
                         <button
-                                    type='submit'
-                                    className='mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full bg-[#EC3D28] w-fit'
-                                >
-                                    <p className='text-white text-center font-inter text-sm sm:text-xl font-semibold uppercase'>
-                                        Book Now
-                                    </p>
-                                    <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center'>
-                                        <ChevronRight
-                                            size={24}
-                                            color='#EC3D28'
-                                        />
-                                    </div>
-                                </button>
+                            type='submit'
+                            className={`mr-auto ml-auto flex items-center justify-center gap-2 py-2 px-5 rounded-full w-fit ${
+                                isSubmitting
+                                    ? 'bg-gray-400 cursor-not-allowed'
+                                    : 'bg-[#EC3D28]'
+                            }`}
+                            disabled={isSubmitting}
+                        >
+                            <p className='text-white text-center font-inter text-sm sm:text-xl font-semibold uppercase'>
+                                Book Now
+                            </p>
+                            <div className='w-10 h-10 bg-white rounded-full flex justify-center items-center'>
+                                {isSubmitting ? (
+                                    <Loader2
+                                        className='animate-spin'
+                                        size={24}
+                                        color={
+                                            isSubmitting ? '#9CA3AF' : '#EC3D28'
+                                        }
+                                    />
+                                ) : (
+                                    <ChevronRight size={24} color='#EC3D28' />
+                                )}
+                            </div>
+                        </button>
                         {/* ... */}
                         <AlertDialog
                             open={showAlert}
                             onOpenChange={setShowAlert}
                         >
-                            <AlertDialogTrigger>
-                                
-                            </AlertDialogTrigger>
                             <AlertDialogContent>
                                 <AlertDialogHeader>
                                     <AlertDialogTitle className='flex text-xl text-black justify-center items-center text-center'>
