@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
-  assetPrefix: 'http://mpb-form.vercel.app'
+  assetPrefix: 'https://mpb-form.vercel.app'
 };
 
 export default nextConfig;
