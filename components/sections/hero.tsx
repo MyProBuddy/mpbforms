@@ -325,14 +325,14 @@ export default function Hero() {
                                     <AlertDialogTitle className='flex text-xl text-black justify-center items-center text-center'>
                                         <svg
                                             xmlns='http://www.w3.org/2000/svg'
-                                            width='80'
-                                            height='80'
+                                            width={80}
+                                            height={80}
                                             viewBox='0 0 24 24'
                                             fill='none'
                                             stroke='#25da43'
-                                            stroke-width='2'
-                                            stroke-linecap='round'
-                                            stroke-linejoin='round'
+                                            strokeWidth={2}
+                                            strokeLinecap='round'
+                                            strokeLinejoin='round'
                                             className='lucide text-center lucide-circle-check-big'
                                         >
                                             <path d='M22 11.08V12a10 10 0 1 1-5.93-9.14' />

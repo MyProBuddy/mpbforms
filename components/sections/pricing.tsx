@@ -56,131 +56,434 @@ export default function Pricing() {
     return (
         <section className='pt-12 bg-[#5F248E] p-6'>
             <div className='flex flex-col justify-center items-center font-semibold gap-3'>
-                <h1 className='uppercase text-[22px] sm:text-[28px] text-center text-white'>Ready to get started?
-</h1>
+                <h1 className='uppercase text-[22px] sm:text-[28px] text-center text-white'>
+                    Ready to get started?
+                </h1>
                 <p className='text-[18px] sm:text-[20px] font-normal text-white mb-4 text-center'>
-                Choose a plan that best suits your need.
+                    Choose a plan that best suits your need.
                 </p>
             </div>
-            <div className="wrapper">
-    <div className="table basic">
-      <div className="price-section">
-        <div className="price-area">
-          <div className="inner-area">
-            <span className="price">₹499</span>
-          </div>
-        </div>
-      </div>
-      <div className="package-name"></div>
-      <ul className="features">
-        <li>
-          <span className="list-name">Grand Proposal Template</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Consultation Call</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Top 5 Eligible Grants</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Competitor Analysis</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Grant Roadmap</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Application best Practices</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </li>
-      </ul>
-      <div className="btn"><button>Purchase</button></div>
-    </div>
-  
-    <div className="table ultimate">
-      <div className="price-section">
-        <div className="price-area">
-          <div className="inner-area">
-            <span className="price">₹1,999</span>
-          </div>
-        </div>
-      </div>
-      <div className="package-name"></div>
-      <ul className="features">
-      <li>
-          <span className="list-name">Grand Proposal Template</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Consultation Call</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Top 5 Eligible Grants</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Competitor Analysis</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Grant Roadmap</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Application best Practices</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-      </ul>
-      <div className="btn"><button>Purchase</button></div>
-    </div>
-
-    <div className="table premium">
-      <div className="ribbon"><span>Recommend</span></div>
-      <div className="price-section">
-        <div className="price-area">
-          <div className="inner-area">
-            <span className="price">₹2,199</span>
-          </div>
-        </div>
-      </div>
-      <div className="package-name"></div>
-      <ul className="features">
-      <li>
-          <span className="list-name">Grand Proposal Template</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Consultation Call</span>
-          <span className="icon check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Top 5 Eligible Grants</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Competitor Analysis</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Grant Roadmap</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-        <li>
-          <span className="list-name">Application best Practices</span>
-          <span className="icon cross"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg></span>
-        </li>
-      </ul>
-      <div className="btn"><button>Purchase</button></div>
-    </div>
-  </div>
-
-  
-
+            <div className='wrapper'>
+                <div className='table basic'>
+                    <div className='price-section'>
+                        <div className='price-area'>
+                            <div className='inner-area'>
+                                <span className='price'>₹499</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='package-name' />
+                    <ul className='features'>
+                        <li>
+                            <span className='list-name'>
+                                Grand Proposal Template
+                            </span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Consultation Call</span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Top 5 Eligible Grants
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#ff0000'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-x'
+                                >
+                                    <path d='M18 6 6 18' />
+                                    <path d='m6 6 12 12' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Competitor Analysis
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#ff0000'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-x'
+                                >
+                                    <path d='M18 6 6 18' />
+                                    <path d='m6 6 12 12' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Grant Roadmap</span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#ff0000'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-x'
+                                >
+                                    <path d='M18 6 6 18' />
+                                    <path d='m6 6 12 12' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Application best Practices
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#ff0000'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-x'
+                                >
+                                    <path d='M18 6 6 18' />
+                                    <path d='m6 6 12 12' />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <div className='btn'>
+                        <button>Purchase</button>
+                    </div>
+                </div>
+                <div className='table ultimate'>
+                    <div className='price-section'>
+                        <div className='price-area'>
+                            <div className='inner-area'>
+                                <span className='price'>₹1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='package-name' />
+                    <ul className='features'>
+                        <li>
+                            <span className='list-name'>
+                                Grand Proposal Template
+                            </span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#ff0000'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-x'
+                                >
+                                    <path d='M18 6 6 18' />
+                                    <path d='m6 6 12 12' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Consultation Call</span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Top 5 Eligible Grants
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Competitor Analysis
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Grant Roadmap</span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Application best Practices
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <div className='btn'>
+                        <button>Purchase</button>
+                    </div>
+                </div>
+                <div className='table premium'>
+                    <div className='ribbon'>
+                        <span>Recommend</span>
+                    </div>
+                    <div className='price-section'>
+                        <div className='price-area'>
+                            <div className='inner-area'>
+                                <span className='price'>₹2,199</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='package-name' />
+                    <ul className='features'>
+                        <li>
+                            <span className='list-name'>
+                                Grand Proposal Template
+                            </span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Consultation Call</span>
+                            <span className='icon check'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Top 5 Eligible Grants
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Competitor Analysis
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>Grant Roadmap</span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                        <li>
+                            <span className='list-name'>
+                                Application best Practices
+                            </span>
+                            <span className='icon cross'>
+                                <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    width={20}
+                                    height={20}
+                                    viewBox='0 0 24 24'
+                                    fill='none'
+                                    stroke='#00ff11'
+                                    strokeWidth={2}
+                                    strokeLinecap='round'
+                                    strokeLinejoin='round'
+                                    className='lucide lucide-check'
+                                >
+                                    <path d='M20 6 9 17l-5-5' />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <div className='btn'>
+                        <button>Purchase</button>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }
