@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import heroImg from '@/static/hero-img.png'
+
 import { ChevronRight, Loader2 } from 'lucide-react'
 import React, { useState, ChangeEvent } from 'react'
 import {
@@ -142,7 +142,7 @@ export default function Hero() {
                     <div className='hidden lg:block'>
                         <Image
                             alt='hero-img'
-                            src={heroImg}
+                            src='/hero-img.png'
                             // className="w-full"
                         />
                     </div>

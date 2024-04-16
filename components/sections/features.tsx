@@ -1,4 +1,4 @@
-import featureImg from '@/static/features.png'
+
 import Image from 'next/image'
 
 export default function Features() {
@@ -8,7 +8,7 @@ export default function Features() {
                 Here&apos;s what we do
             </h1>
             <div>
-                <Image alt='features-img' src={featureImg} />
+                <Image alt='features-img' src='/features.png' />
             </div>
         </section>
     )
