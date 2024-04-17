@@ -1,5 +1,10 @@
+'use client'
+
 import Image from 'next/image'
+import { useState } from 'react'
 import pricingImg from '@/static/pricing.png'
+import { Contact } from 'lucide-react'
+import ContactForm from './form'
 
 interface PricingCardProps {
     recommended: boolean
@@ -20,6 +25,7 @@ export function PricingCard({
         return { __html: description.replace(/\n/g, '<br>') }
     }
 
+    
     return (
         <div
             className='bg-white rounded-2xl w-72 text-black font-semibold pt-8 flex flex-col items-center px-4 gap-4'
@@ -53,8 +59,10 @@ export function PricingCard({
 }
 
 export default function Pricing() {
+    const [Purchase, setPurchase] = useState(false)
+
     return (
-        <section className='pt-12 bg-[#5F248E] p-6'>
+        <section className='pt-12 bg-[#F47217] p-6'>
             <div className='flex flex-col justify-center items-center font-semibold gap-3'>
                 <h1 className='uppercase text-[22px] sm:text-[28px] text-center text-white'>
                     Ready to get started?
@@ -202,8 +210,9 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button>Purchase</button>
+                        <button onClick={ ()=>  setPurchase(true)}>Purchase</button>
                     </div>
+    
                 </div>
                 <div className='table ultimate'>
                     <div className='price-section'>
@@ -340,12 +349,12 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button>Purchase</button>
+                        <button onClick={ ()=>  setPurchase(true)}>Purchase</button>
                     </div>
                 </div>
                 <div className='table premium'>
                     <div className='ribbon'>
-                        <span>Recommend</span>
+                        <span>Recommended</span>
                     </div>
                     <div className='price-section'>
                         <div className='price-area'>
@@ -480,9 +489,10 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button>Purchase</button>
+                        <button onClick={ ()=>  setPurchase(true)} >Purchase</button>
                     </div>
                 </div>
+                {Purchase && <ContactForm />}
             </div>
         </section>
     )

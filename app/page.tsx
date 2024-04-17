@@ -24,7 +24,6 @@ export default function Home() {
             <Featuredin />
             <Pricing />
             <Partners />
-
             <Footer />
             
         </main>
