@@ -50,7 +50,7 @@ export async function POST(request: Request) {
             },
         )
     } catch (error: any) {
-        console.error(error)
+        console.error(error.message)
         return Response.json(
             { message: error.message },
             {
