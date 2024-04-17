@@ -20,7 +20,7 @@ const PrivacyPolicy: React.FC = () => {
         <div className="mb-8">
           <h2 className="text-lg font-semibold text-[#5F248E] mb-2">2. Refund Process</h2>
           <p className='text-justify'>
-          To request a refund, please contact us within [insert number of days] days of receiving notification of your eligibility status. Refunds will be issued to the original payment method used for the purchase within a reasonable timeframe. Please note that refunds may be subject to processing fees or other charges as outlined in our refund 
+          To request a refund, please contact us within 24 hours of receiving notification of your eligibility status. Refunds will be issued to the original payment method used for the purchase within a reasonable timeframe. Please note that refunds may be subject to processing fees or other charges as outlined in our refund 
 
 
           </p>

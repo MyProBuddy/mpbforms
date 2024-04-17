@@ -14,7 +14,7 @@ const Partners = () => {
                     <a href='https://rookhq.com'><Image src='/partners/rook.png' alt='partner1' className='rounded mb-0' width={264} height={100}/></a>
                     <a href='https://instapr.app'><Image src='/partners/ipr.png' alt='partner2' className='rounded mb-0' width={264} height={100}/></a>
                     <a href='https://rookfellows.com'><Image src='/partners/rf.png' alt='partner3' className='rounded mb-0' width={264} height={100}/></a>
-                    <a href='https://startupfellows.ws'><Image src='/partners/sf.png' alt='partner4' className='rounded mb-0' width={264} height={100}/></a>
+                    <a href='https://startupfello.ws'><Image src='/partners/sf.png' alt='partner4' className='rounded mb-0' width={264} height={100}/></a>
                 </div>
             </div>
         </div>

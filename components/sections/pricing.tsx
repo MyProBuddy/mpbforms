@@ -209,9 +209,9 @@ export default function Pricing() {
                             </span>
                         </li>
                     </ul>
-                    <div className='btn'>
-                    <button ><a href='/'>Purchase</a></button>
-                    </div>
+                    <a href='#hero'> <div className='btn'>
+                    <button>Purchase</button>
+                    </div></a>
     
                 </div>
                 <div className='table ultimate'>
@@ -348,9 +348,9 @@ export default function Pricing() {
                             </span>
                         </li>
                     </ul>
-                    <div className='btn'>
-                 <button >Purchase</button>
-                    </div>
+                    <a href='#hero'> <div className='btn'>
+                    <button>Purchase</button>
+                    </div></a>
                 </div>
                 <div className='table premium'>
                     <div className='ribbon'>
@@ -488,9 +488,9 @@ export default function Pricing() {
                             </span>
                         </li>
                     </ul>
-                    <div className='btn'>
-                        <button ><a href='/'>Purchase</a></button>
-                    </div>
+                    <a href='#hero'> <div className='btn'>
+                    <button>Purchase</button>
+                    </div></a>
                 </div>
               
             </div>
