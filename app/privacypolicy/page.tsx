@@ -6,7 +6,7 @@ const PrivacyPolicy: React.FC = () => {
       <h1 className="text-2xl font-semibold mb-8 text-[#FF8F40] text-center">Privacy Policy</h1>
       <div className="bg-white shadow-md rounded-lg p-6 prose max-w-3xl mx-auto">
         <p className="text-lg mb-4 text-justify">
-          Please read these terms and conditions carefully before using our website.
+          Please read these Privacy Policies carefully before using our website.
         </p>
         <div className="mb-8">
           <h2 className="text-lg font-semibold text-justify text-[#5F248E] mb-2">1. Information Collection:</h2>

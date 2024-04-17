@@ -16,8 +16,27 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
+             <head>
+                {/* Google Tag Manager */}
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-YTZFESTCL6"
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                          gtag('config', 'G-YTZFESTCL6');
+                        `,
+                    }}
+                ></script>
+                {/* End Google Tag Manager */}
+            </head>
             <body className={inter.className}>
                 {children}
+                
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `

@@ -269,7 +269,8 @@
     content: "";
     z-index: -1;
     display: block;
-    border: 7px solid #4606ac;
+    border: 7px solid #5F248E
+    ;
     border-top-color: transparent;
     border-left-color: transparent;
   }
@@ -285,9 +286,11 @@
     position: absolute;
     top: 30px;
     right: 0;
+    font: bold;
     transform: rotate(-45deg);
     width: 200px;
-    background: #a26bfa;
+    background: #5F248E
+    ;
     padding: 10px 0;
     color: #fff;
     text-align: center;

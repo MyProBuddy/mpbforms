@@ -349,7 +349,7 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                    <button ><a href='/'>Purchase</a></button>
+                    <a href='#hero'> <button >Purchase</button></a>
                     </div>
                 </div>
                 <div className='table premium'>

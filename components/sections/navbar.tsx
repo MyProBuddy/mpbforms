@@ -26,8 +26,6 @@ export default function Navbar() {
                 <Link href={'/#'}>Home</Link>
                 <Link href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</Link>
                 <Link href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</Link>
-                <Link href={'/termsandconditions'}>Terms & Conditions</Link>
-                <Link href={'/privacypolicy'}>Privacy Policy</Link>
             </div>
             <div className='hidden md:block'></div>
             <div className='flex items-center z-20 px-2 md:hidden '>
@@ -55,8 +53,6 @@ export default function Navbar() {
                 <Link href={'/#'}>Home</Link>
                 <Link href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</Link>
                 <Link href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</Link>
-                <Link href={'/termsandconditions'}>Terms & Conditions</Link>
-                <Link href={'/privacypolicy'}>Privacy Policy</Link>
                 </div>
             </div>
         </nav>
