@@ -52,10 +52,10 @@ export async function POST(request: Request) {
     } catch (error: any) {
         console.error(error.message)
         return Response.json(
-            { message: error.message },
+            { message: "Error occurred" },
             {
                 status: 500,
-                statusText: 'Internal Server Error',
+                statusText: error.message,
             },
         )
     }
