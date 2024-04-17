@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 
 import { ChevronRight, Loader2 } from 'lucide-react'
 import React, { useState, ChangeEvent } from 'react'
