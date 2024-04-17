@@ -140,7 +140,7 @@ export default function Hero() {
                         </span>
                     </div>
                     <div className='hidden lg:block'>
-                        <Image
+                        <img
                             alt='hero-img'
                             src='/hero-img.png'
                             // className="w-full"

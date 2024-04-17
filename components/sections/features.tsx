@@ -8,7 +8,7 @@ export default function Features() {
                 Here&apos;s what we do
             </h1>
             <div>
-                <Image alt='features-img' src='/features.png' />
+                <img alt='features-img' src='/features.png' />
             </div>
         </section>
     )
