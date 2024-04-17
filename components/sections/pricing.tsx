@@ -210,7 +210,7 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button onClick={ ()=>  setPurchase(true)}>Purchase</button>
+                    <button ><a href='/'>Purchase</a></button>
                     </div>
     
                 </div>
@@ -349,7 +349,7 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button onClick={ ()=>  setPurchase(true)}>Purchase</button>
+                    <button ><a href='/'>Purchase</a></button>
                     </div>
                 </div>
                 <div className='table premium'>
@@ -489,10 +489,10 @@ export default function Pricing() {
                         </li>
                     </ul>
                     <div className='btn'>
-                        <button onClick={ ()=>  setPurchase(true)} >Purchase</button>
+                        <button ><a href='/'>Purchase</a></button>
                     </div>
                 </div>
-                {Purchase && <ContactForm />}
+              
             </div>
         </section>
     )

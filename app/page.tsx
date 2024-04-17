@@ -10,12 +10,13 @@ import Featuredin from '@/components/sections/featuredin'
 import Partners from '@/components/sections/partners'
 import Footer from '@/components/sections/footer'
 import Pricing from '@/components/sections/pricing'
+import VismeContactForm from '@/components/sections/heroform'
 
 export default function Home() {
     return (
         <main className='min-h-screen bg-white'>
             <Navbar />
-            <Hero />
+            <Hero/>
             <Counter />
             <Features />
             <Schemes />

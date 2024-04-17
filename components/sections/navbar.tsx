@@ -26,6 +26,8 @@ export default function Navbar() {
                 <Link href={'/#'}>Home</Link>
                 <Link href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</Link>
                 <Link href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</Link>
+                <Link href={'/termsandconditions'}>Terms & Conditions</Link>
+                <Link href={'/privacypolicy'}>Privacy Policy</Link>
             </div>
             <div className='hidden md:block'></div>
             <div className='flex items-center z-20 px-2 md:hidden '>
@@ -50,9 +52,11 @@ export default function Navbar() {
                 style={{ height: menuOpen ? '100%' : '0' }}
             >
                 <div className='flex flex-col gap-8 items-center pt-16 text-[#ED4935] font-semibold'>
-                    <Link href={'/#'}>Home</Link>
-                    <Link href={'/#'}>Join The Community</Link>
-                    <Link href={'/#'}>View Our Expert Profile</Link>
+                <Link href={'/#'}>Home</Link>
+                <Link href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</Link>
+                <Link href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</Link>
+                <Link href={'/termsandconditions'}>Terms & Conditions</Link>
+                <Link href={'/privacypolicy'}>Privacy Policy</Link>
                 </div>
             </div>
         </nav>

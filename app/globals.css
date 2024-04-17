@@ -231,7 +231,7 @@
     background: #F47217;
   }
   .basic .package-name::before{
-    content: "BASIC";
+    content: "GPT";
   }
   .premium .package-name::before{
     content: "PROFESSIONAL";

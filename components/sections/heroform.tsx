@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 
 const VismeContactForm: React.FC = () => {
@@ -12,9 +14,12 @@ const VismeContactForm: React.FC = () => {
     };
   }, []);
 
-  return (
-    <div className="visme_d" data-title="Contact Me Contact Form" data-url="mxgm06x8-contact-me-contact-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="57414"></div>
-  );
+return (
+    <div className='h-full mb-12'>
+            <h2 className="text-3xl text-center text-xl text-center mt-12 lg:text-[28px] md:text-2xl sm:text-2xl leading-2 text-[#5F248E] font-bold">Know the best <span className='text-[#FF8F40]'>GRANTS & GOVERNMENT SCHEMES </span><br/>for your business idea / startup</h2>
+            <div className="visme_d h-screen" data-title="Contact Me Contact Form" data-url="mxgm06x8-contact-me-contact-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="57414"></div>
+    </div>
+);
 };
 
 export default VismeContactForm;
