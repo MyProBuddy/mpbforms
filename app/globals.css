@@ -202,10 +202,10 @@
   .premium .price-area,
   .premium .inner-area,
   .premium .btn button{
-    background: #a26bfa;
+    background: #5F248E;
   }
   .premium .btn button:hover{
-    background: #833af8;
+    background: #5F248E;
   }
   .ultimate ::selection,
   .ultimate .price-area,
@@ -225,7 +225,7 @@
     background: #F47217;
   }
   .premium .package-name{
-    background: #d0b3ff;
+    background: #5F248E;
   }
   .ultimate .package-name{
     background: #F47217;
