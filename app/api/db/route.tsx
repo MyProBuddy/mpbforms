@@ -49,10 +49,10 @@ export async function POST(request: Request) {
                 statusText: 'OK',
             },
         )
-    } catch (error) {
+    } catch (error: any) {
         console.error(error)
         return Response.json(
-            { message: 'An error occurred while submitting the form' },
+            { message: error.message },
             {
                 status: 500,
                 statusText: 'Internal Server Error',
