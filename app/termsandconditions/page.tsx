@@ -37,7 +37,23 @@ const TermsAndConditionsPage: React.FC = () => {
         <p className="text-sm text-gray-600 mt-8">
           These Terms and Conditions were last updated on April 18, 2024.
         </p>
+        <footer className="mt-8">
+        <div className="bg-gray-200 py-4 px-6 rounded-lg">
+          <div className="flex flex-col md:flex-row justify-between sm:items-center items-left">
+            <div className='my-2 text-left'>
+              <p className="text-sm text-gray-600">Address:</p>
+              <p className="text-sm text-gray-800">C5, Jains Anusha, Valluvar kottam main <br/>road, Chennai, Tamil nadu</p>
+            </div>
+            <div className='my-2 text-left'>
+              <p className="text-sm text-gray-600">Contact Info:</p>
+              <p className="text-sm text-gray-800">Phone: 123-456-7890</p>
+              <p className="text-sm text-gray-800">Email: example@example.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
       </div>
+      
     </div>
   );
 }
