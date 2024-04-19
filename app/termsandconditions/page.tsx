@@ -42,7 +42,7 @@ const TermsAndConditionsPage: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between sm:items-center items-left">
             <div className='my-2 text-left'>
               <p className="text-sm text-gray-600">Address:</p>
-              <p className="text-sm text-gray-800">C5, Jains Anusha, Valluvar kottam main <br/>road, Chennai, Tamil nadu</p>
+              <p className="text-sm text-gray-800">C5, Jains Anusha, Valluvar kottam main <br/>road, Chennai 600034, Tamil nadu</p>
             </div>
             <div className='my-2 text-left'>
               <p className="text-sm text-gray-600">Contact Info:</p>
