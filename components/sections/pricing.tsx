@@ -84,7 +84,7 @@ export default function Pricing() {
                     <ul className='features'>
                         <li>
                             <span className='list-name'>
-                                Grand Proposal Template
+                                Grant Proposal Template
                             </span>
                             <span className='icon check'>
                                 <svg
@@ -226,7 +226,7 @@ export default function Pricing() {
                     <ul className='features'>
                         <li>
                             <span className='list-name'>
-                                Grand Proposal Template
+                                Grant Proposal Template
                             </span>
                             <span className='icon check'>
                                 <svg
@@ -367,7 +367,7 @@ export default function Pricing() {
                     <ul className='features'>
                         <li>
                             <span className='list-name'>
-                                Grand Proposal Template
+                                Grant Proposal Template
                             </span>
                             <span className='icon check'>
                                 <svg
