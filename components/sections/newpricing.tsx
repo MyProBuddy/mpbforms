@@ -85,7 +85,7 @@ export default function NewPricing() {
                   <div className='price-section'>
                       <div className='price-area'>
                           <div className='inner-area'>
-                              <span className='price'>₹2,199</span>
+                              <span className='price'>₹2,499</span>
                               
                           </div>
                       </div>
