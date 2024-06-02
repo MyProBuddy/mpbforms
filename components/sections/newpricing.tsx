@@ -73,9 +73,9 @@ export default function NewPricing() {
           <h1 className='text-4xl font-black text-[#fff] md:text-8xl'>Lets Connect!</h1>
           <h2 className='text-md text-[#fff] md:text-2xl'>Fast track your Funding Journey</h2>
         </div>
-        <p className='max-w-md text-sm md:text-base text-[#fff]'>Schedule a FREE Introductory call with our experts, Today!</p>
+        <p className='max-w-md text-sm text-center md:text-base md:text-left text-[#fff]'>Schedule a FREE Introductory call with our experts, Today!</p>
         <div className='w-full flex items-center justify-center md:justify-start gap-4'>
-         <a href='http://calendly.com/amrish-kcw'> <button className='w-48 h-12 text-sm sm:text-base rounded bg-[#5F248E] text-[#fff] font-bold hover:bg-fuchsia-700 hover:text-white transition-colors'>Schedule Now !</button> </a>
+         <a href='http://calendly.com/amrish-kcw'> <button className='w-48 h-12 text-sm sm:text-base rounded bg-[#5F248E] text-[#fff] font-bold hover:bg-fuchsia-700 hover:text-white transition-colors'><span className='schedule'>Schedule Now !</span></button> </a>
           
         </div>
       </div>
@@ -86,9 +86,11 @@ export default function NewPricing() {
                       <div className='price-area'>
                           <div className='inner-area'>
                               <span className='price'>₹2,199</span>
+                              
                           </div>
                       </div>
                   </div>
+                  <div className='text-center text-bold mt-2'><b><s className='text-[#5F248E] text-bold text-xl'>₹5,000</s> <br/><span className='list-name'>[ Including 50% Off ]</span></b></div>
                   <div className='package-name' />
                   <ul className='features'>
                       <li>
