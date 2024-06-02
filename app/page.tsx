@@ -11,6 +11,7 @@ import Partners from '@/components/sections/partners'
 import Footer from '@/components/sections/footer'
 import Pricing from '@/components/sections/pricing'
 import VismeContactForm from '@/components/sections/heroform'
+import NewPricing from '@/components/sections/newpricing'
 
 export default function Home() {
     return (
@@ -23,7 +24,7 @@ export default function Home() {
             <Grants />
             <Cta/>
             <Featuredin />
-            <Pricing />
+            <NewPricing />
             <Partners />
             <Footer />
             

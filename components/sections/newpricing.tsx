@@ -31,6 +31,7 @@ export function PricingCard({
     
     return (
         <div
+         
             className='bg-white rounded-2xl w-72 text-black font-semibold pt-8 flex flex-col items-center px-4 gap-4'
             style={{ height: '420px' }}
         >
@@ -66,7 +67,7 @@ export default function NewPricing() {
 
     return (
 
-<section className='flex flex-col items-center bg-[#F47217] justify-center relative'>
+<section id="pricing" className='flex flex-col items-center bg-[#F47217] justify-center relative'>
      <header id="home" className="flex flex-col md:flex-row w-full max-w-6xl py-16 items-center justify-center p-8 relative overflow-x-hidden">
         <div className='w-full h-2/4 md:h-full md:w-2/5 flex flex-col justify-center items-center md:items-start gap-8'>
         <div className='flex flex-col gap-2'>
