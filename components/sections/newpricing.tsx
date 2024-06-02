@@ -71,9 +71,8 @@ export default function NewPricing() {
         <div className='w-full h-2/4 md:h-full md:w-2/5 flex flex-col justify-center items-center md:items-start gap-8'>
         <div className='flex flex-col gap-2'>
           <h1 className='text-4xl font-black text-[#fff] md:text-8xl'>Lets Connect!</h1>
-          <h2 className='text-md text-[#fff] md:text-2xl'>Fast track your Funding Journey</h2>
         </div>
-        <p className='max-w-md text-sm text-center md:text-base md:text-left text-[#fff]'>Schedule a FREE Introductory call with our experts, Today!</p>
+        <p className='text-md text-[#fff] md:text-2xl text-center md:text-left'>Schedule a FREE Introductory call with our experts, Today!</p>
         <div className='w-full flex items-center justify-center md:justify-start gap-4'>
          <a href='http://calendly.com/amrish-kcw'> <button className='w-48 h-12 text-sm sm:text-base rounded bg-[#5F248E] text-[#fff] font-bold hover:bg-fuchsia-700 hover:text-white transition-colors'><span className='schedule'>Schedule Now !</span></button> </a>
           
@@ -81,16 +80,18 @@ export default function NewPricing() {
       </div>
 
       <div className='price w-full h-2/4 md:h-full md:w-3/5 flex items-center justify-end relative '>
-      <div className='table premium bg-[#fff] p-6'>
+      <div id="premium" className='table premium bg-[#fff] block relative p-6'>
+      <div className='ribbon1'>
+                        <span className='text-xxl'><b>50% OFF</b></span>
+                    </div>
                   <div className='price-section'>
                       <div className='price-area'>
                           <div className='inner-area'>
-                              <span className='price'>₹2,499</span>
-                              
+                              <span className='price'>₹5,000</span>
                           </div>
                       </div>
+                     
                   </div>
-                  <div className='text-center text-bold mt-2'><b><s className='text-[#5F248E] text-bold text-xl'>₹5,000</s> <br/><span className='list-name'>[ Including 50% Off ]</span></b></div>
                   <div className='package-name' />
                   <ul className='features'>
                       <li>
@@ -216,9 +217,10 @@ export default function NewPricing() {
                           </span>
                       </li>
                   </ul>
-                  <a href='#hero'> <div className='btn'>
-                  <button>Purchase</button>
+                  <a href='https://marketplace-8f825a.zapier.app/mpb-grants'> <div className='btn'>
+                  <button>Purchase For ₹2,400</button>
                   </div></a>
+                  <p className='limited text-[#EC3D28] text-base text-center mt-2'><b>Limited Time Offer !</b></p>
               </div>     
       </div>
 
