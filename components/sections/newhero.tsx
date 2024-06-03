@@ -22,7 +22,7 @@ const NewHero = () => {
               Click here to know more ! <br/>
             </p>
             <div className="flex flex-wrap align-center justify-center gap-3">
-              <a href="#" className="btn1">Get Started</a>
+              <a href="#pricing" className="btn1">Get Started</a>
             
             </div>
           </div>
