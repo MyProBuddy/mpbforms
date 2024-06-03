@@ -12,12 +12,16 @@ import Footer from '@/components/sections/footer'
 import Pricing from '@/components/sections/pricing'
 import VismeContactForm from '@/components/sections/heroform'
 import NewPricing from '@/components/sections/newpricing'
+import NewHero from '@/components/sections/newhero'
+
 
 export default function Home() {
     return (
         <main className='min-h-screen bg-white'>
             <Navbar />
-            <VismeContactForm/>
+           
+            <NewHero />
+            {/* */}
             <Counter />
             <Features />
             <Schemes />
@@ -25,6 +29,7 @@ export default function Home() {
             <Cta/>
             <Featuredin />
             <NewPricing />
+            <VismeContactForm/>
             <Partners />
             <Footer />
             
