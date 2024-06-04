@@ -215,7 +215,7 @@ export default function NewPricing() {
                       </li>
                       <li>
                           <span className='list-name'>
-                              Application best Practices
+                              Application Best Practices
                           </span>
                           <span className='icon cross'>
                               <svg
