@@ -71,13 +71,13 @@ export default function NewPricing() {
      <header id="home" className="flex flex-col md:flex-row w-full max-w-6xl py-16 items-center justify-center p-8 relative overflow-x-hidden">
         <div className='w-full h-2/4 md:h-full md:w-2/5 flex flex-col justify-center items-center md:items-start gap-8'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-4xl font-black text-[#fff] md:text-8xl'>Lets Connect!</h1>
+          <h1 className='text-2xl font-black text-[#fff] md:text-8xl sm:7xl'>Hire an Expert, Today!</h1>
         </div>
-        <p className='text-md text-[#fff] md:text-2xl text-center md:text-left'>Schedule a FREE Introductory call with our experts, Today!</p>
+        {/* <p className='text-md text-[#fff] md:text-2xl text-center md:text-left'>Schedule a FREE Introductory call with our experts, Today!</p>
         <div className='w-full flex items-center justify-center md:justify-start gap-4'>
          <a href='http://calendly.com/amrish-kcw'> <button className='w-48 h-12 text-sm sm:text-base rounded bg-[#5F248E] text-[#fff] font-bold hover:bg-fuchsia-700 hover:text-white transition-colors'><span className='schedule'>Schedule Now !</span></button> </a>
           
-        </div>
+        </div> */}
       </div>
 
       <div className='price w-full h-2/4 md:h-full md:w-3/5 flex items-center justify-end relative '>
@@ -219,7 +219,7 @@ export default function NewPricing() {
                       </li>
                   </ul>
                   <a href='https://marketplace-8f825a.zapier.app/mpb-grants'> <div className='btn'>
-                  <button>Purchase For ₹2,499</button>
+                  <button>Get it For ₹2,499</button>
                   </div></a>
                   <p className='limited text-[#EC3D28] text-base text-center mt-2'><b>Limited Time Offer!</b></p>
               </div>     

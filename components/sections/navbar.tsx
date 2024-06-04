@@ -22,7 +22,7 @@ export default function Navbar() {
                     height={67 * 0.75}
                 />
             </div>
-            <div className='hidden md:flex items-center justify-center gap-14 text-[#ED4935] font-semibold'>
+            <div className='hidden md:flex items-center justify-center gap-14 text-[#5F248E] font-semibold'>
                 <a target="_blank" href={'/#'}>Home</a>
                 <a target="_blank" href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</a>
                 <a target="_blank" href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</a>
@@ -49,7 +49,7 @@ export default function Navbar() {
                 }`}
                 style={{ height: menuOpen ? '100%' : '0' }}
             >
-                <div className='flex flex-col gap-8 items-center pt-16 text-[#ED4935] font-semibold'>
+                <div className='flex flex-col gap-8 items-center pt-16 text-[#5F248E] font-semibold'>
                 <Link href={'/#'}>Home</Link>
                 <Link href={'https://www.linkedin.com/groups/14304535/'}>Join The Community</Link>
                 <Link href={'https://www.linkedin.com/in/amrish-krishnan/'}>View Our Expert Profile</Link>

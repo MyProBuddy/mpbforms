@@ -34,14 +34,14 @@ const Hero = () => {
                   alt="shape"
                   className="lazy-img shapes line-shape"
                 /> */}
-                <span className="span1 ">Know Your Best</span><br/>
+                <span className="span1 ">Know The Best</span><br/>
                 <span className="span2 mt-4">
                   Grants & Government Schemes<br/>
                 </span>
                 <span className="span1">For Your Business/Startup</span>
               </h1>
               <p className="ptext mb-75 pt-12 lg-mb-50 lg-pt-10">
-                Click here to Get your Grant Proposal Template for ₹2,499
+                Get the customized Grant Report for ₹2,499
 
               </p>
               <div className="d-sm-flex justify-content-center align-items-center mt-10">
