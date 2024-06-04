@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Container, Row, Col } from "react-bootstrap";
 import pricingImg from '@/static/pricing.png'
+import Link from 'next/link';
 import { Contact } from 'lucide-react'
 import ContactForm from './form'
 import 'animate.css';
@@ -71,7 +72,20 @@ export default function NewPricing() {
      <header id="home" className="flex flex-col md:flex-row w-full max-w-6xl py-16 items-center justify-center p-8 relative overflow-x-hidden">
         <div className='w-full h-2/4 md:h-full md:w-2/5 flex flex-col justify-center items-center md:items-start gap-8'>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-2xl font-black text-[#fff] md:text-8xl sm:7xl'>Hire an Expert, Today!</h1>
+          <h1 className='text-6xl font-black text-[#fff] md:text-7xl sm:7xl'>Hire an </h1>
+          <h1 className='text-8xl font-black text-[#fff] md:text-8xl sm:7xl'>Expert!</h1>
+        
+        <a href='https://www.linkedin.com/in/amrish-krishnan/'><Image
+          className="rounded mt-6 flex p-2 text-left bg-[#ffff]"
+          src="/linkedin.jpg"
+          alt="img"
+          width={380}
+          height={280}
+        />
+        </a>
+
+      
+
         </div>
         {/* <p className='text-md text-[#fff] md:text-2xl text-center md:text-left'>Schedule a FREE Introductory call with our experts, Today!</p>
         <div className='w-full flex items-center justify-center md:justify-start gap-4'>
