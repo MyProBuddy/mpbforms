@@ -2,21 +2,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import ModalVideo from "react-modal-video";
+
 
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
     <>
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="20QUNgFIrK0"
-        onClose={() => setOpen(false)}
-      />
-
+    
       <div className="hero-banner-two position-relative pt-250 lg-pt-200 md-pt-150">
         <img
           src="/images/shape/shape_26.svg"
