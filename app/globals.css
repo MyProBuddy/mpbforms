@@ -378,6 +378,24 @@
     } 
   }
 
+  .free{
+    color: #cd3241;
+    animation: animate 1.5s linear infinite; 
+  }  
+   
+  @keyframes animate{ 
+    0%{ 
+      opacity: 0.5; 
+    } 
+    50%{ 
+      opacity: 1; 
+    } 
+    100%{ 
+      opacity: 0.5; 
+    } 
+  }
+
+
 
   .hero-banner-two {
     z-index: 1;

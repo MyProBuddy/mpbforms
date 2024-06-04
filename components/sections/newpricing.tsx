@@ -75,14 +75,17 @@ export default function NewPricing() {
           <h1 className='text-6xl font-black text-[#fff] md:text-7xl sm:7xl'>Hire an </h1>
           <h1 className='text-8xl font-black text-[#fff] md:text-8xl sm:7xl'>Expert!</h1>
         
+        <div className='mt-8'>
+            <p className='text-[#fff] text-xl font-bold'>View Our Expert Profile </p>
         <a href='https://www.linkedin.com/in/amrish-krishnan/'><Image
-          className="rounded mt-6 flex p-2 text-left bg-[#ffff]"
+          className="amrish rounded mt-2 flex p-2 text-left bg-[#ffff]"
           src="/linkedin.jpg"
           alt="img"
           width={380}
           height={280}
         />
         </a>
+        </div>
 
       
 
@@ -233,7 +236,7 @@ export default function NewPricing() {
                       </li>
                   </ul>
                   <a href='https://marketplace-8f825a.zapier.app/mpb-grants'> <div className='btn'>
-                  <button>Get it For ₹2,499</button>
+                  <button>Get it for ₹2,499</button>
                   </div></a>
                   <p className='limited text-[#EC3D28] text-base text-center mt-2'><b>Limited Time Offer!</b></p>
               </div>     

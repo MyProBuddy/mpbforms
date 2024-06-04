@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 const Grants = () => {
     return (
         <div className="text-black py-8">
-             <h2 className="text-[#5F248E] text-2xl font-bold text-center pb-4">LEARN MORE ABOUT THE GARNT REWARDEES</h2>
+             <h2 className="text-[#5F248E] text-2xl font-bold text-center px-2 pb-4">LEARN MORE ABOUT THE GARNT REWARDEES</h2>
             <Marquee>
              <div className="text-center p-6">
                 <Image src="/grants/abby.png" alt="abby" width={180} height={80}></Image>

@@ -18,7 +18,7 @@ const VismeContactForm: React.FC = () => {
 
 return (
     <section className='h-full w-screen pt-10 pb-6' id="hero">
-      <h2 className="text-[#5F248E] text-2xl font-bold text-center px-4 pb-4">SCHEDULE A FREE INTRODUCTORY CALL WITH OUR EXPERTS,TODAY!</h2>
+      <h2 className="text-[#5F248E] text-2xl font-bold text-center px-4 pb-4">Schedule a<span className='free'> FREE </span> introductory call with our Experts, Today!</h2>
         <div className='w-full flex items-center justify-center md:justify-center mt-6 gap-4'>
           
         </div>
