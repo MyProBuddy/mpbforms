@@ -79,7 +79,7 @@ export default function NewPricing() {
             <p className='text-[#fff] text-xl font-bold'>View Our Expert Profile </p>
         <a href='https://www.linkedin.com/in/amrish-krishnan/'><Image
           className="amrish rounded mt-2 flex p-2 text-left bg-[#ffff]"
-          src="/linkedin.jpg"
+          src="/linkedin.png"
           alt="img"
           width={380}
           height={280}
