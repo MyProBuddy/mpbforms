@@ -26,7 +26,7 @@ export default function Home() {
             {/* */}
             <Counter />
             <Features />
-            <Howitworks />
+            {/* <Howitworks /> */}
             <Schemes />
             <Grants />
             <Cta />
