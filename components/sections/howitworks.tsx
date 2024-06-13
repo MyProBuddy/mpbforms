@@ -7,7 +7,7 @@ export default function Howitworks() {
             <h1 className='text-[#5F248E] text-[26px] font-semibold uppercase'>
                 How it Works ?
             </h1>
-            <div>
+            <div className='px-2'>
                 <img alt='features-img' src='/howitworks.png' />
             </div>
         </section>
