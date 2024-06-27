@@ -9,24 +9,34 @@ import Cta from '@/components/sections/cta'
 import Featuredin from '@/components/sections/featuredin'
 import Partners from '@/components/sections/partners'
 import Footer from '@/components/sections/footer'
-import NewPricing from '@/components/sections/newpricing'
+import Pricing from '@/components/sections/pricing'
 import VismeContactForm from '@/components/sections/heroform'
+import NewPricing from '@/components/sections/newpricing'
+import NewHero from '@/components/sections/newhero'
+import AmrishHero from '@/components/sections/amrishhero'
+import Howitworks from '@/components/sections/howitworks'
+
 
 export default function Home() {
     return (
         <main className='min-h-screen bg-white'>
             <Navbar />
-            <VismeContactForm/>
+            {/* <AmrishHero /> */}
+            <NewHero />
+            {/* */}
             <Counter />
             <Features />
+            <Howitworks />
             <Schemes />
             <Grants />
-            <Cta/>
+            <Cta />
             <Featuredin />
+            <VismeContactForm />
             <NewPricing />
+
             <Partners />
             <Footer />
-            
+
         </main>
     )
 }
