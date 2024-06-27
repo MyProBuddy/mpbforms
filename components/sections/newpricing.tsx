@@ -235,7 +235,7 @@ export default function NewPricing() {
                           </span>
                       </li>
                   </ul>
-                  <a href='https://marketplace-8f825a.zapier.app/mpb-grants'> <div className='btn'>
+                  <a href='https://calendar.app.google/kdeXqKap98JaSQVu6'> <div className='btn'>
                   <button>Get it for ₹2,499</button>
                   </div></a>
                   <p className='limited text-[#EC3D28] text-base text-center mt-2'><b>Limited Time Offer!</b></p>

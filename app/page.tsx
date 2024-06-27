@@ -29,7 +29,7 @@ export default function Home() {
             <Cta/>
             <Featuredin />
             <NewPricing />
-            <VismeContactForm/>
+            {/* <VismeContactForm/> */}
             <Partners />
             <Footer />
             
